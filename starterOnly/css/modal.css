@@ -457,7 +457,7 @@ input {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  
 }
 .hero-content::after {
   content: "";
@@ -471,17 +471,19 @@ input {
 .hero-content > * {
   position: relative;
   z-index: 1;
+  height: auto;
 }
 .hero-headline {
   font-size: 6rem;
   font-weight: normal;
   white-space: nowrap;
+  word-wrap: break-word;
 }
 .hero-text {
-  width: 146%;
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
+  word-wrap: break-word;
 }
 .btn-signup {
   outline: none;
@@ -532,12 +534,13 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     white-space: normal;
+    word-wrap: break-word;
   }
   .hero-text {
-    width: unset;
     font-size: 1.5rem;
+    word-wrap: break-word;
   }
   .hero-img img {
     border-radius: 10px;

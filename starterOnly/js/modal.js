@@ -6,37 +6,41 @@ function editNav() {
     x.className = "topnav";
   }
 }
-// DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const closeModal = document.querySelector(".close");
 const formContent = document.querySelector("form");
 const reussit = document.querySelector(".reussit");
 
-// Launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
 function launchModal() {
   modalbg.style.display = "block";
+  formContent.style.display = "block";
+  reussit.style.display = "none";
 }
 
-// Close modal event
 closeModal.addEventListener("click", closeModalX);
-
 function closeModalX() {
   modalbg.style.display = "none";
 }
 
-// Handle form submit event
+// Submit
 formContent.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Hide form, show success message
-  formContent.style.display = "none";
-  reussit.style.display = "block";
+  // Call validation functions defined (form.js)
+  const firstValid = firstNameCheck(document.getElementById('first').value);
+  const lastValid = lastNameCheck(document.getElementById('last').value);
+  const emailValid = emailCheck(document.getElementById('email').value);
+  const birthdateValid = birthdateCheck(document.getElementById('birthdate').value);
+  const quantityValid = quantityCheck(document.getElementById('quantity').value);
+  const locationsValid = locationCheck();
+  const lesTermsValid = lesTermsCheck();
 
-  
-  formContent.reset();
+  if (firstValid && lastValid && emailValid && birthdateValid && quantityValid && locationsValid && lesTermsValid) {
+    // If valid, show success and hide form
+    formContent.style.display = "none";
+    reussit.style.display = "block";
+    formContent.reset();
+  }
 });
-
-
