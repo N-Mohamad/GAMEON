@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="/starterOnly/css/modal.css" />
+    <link rel="stylesheet" href="./starterOnly/css/modal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans"
@@ -60,6 +60,7 @@
               <p>
                 Merci Votre réservation a été reçue.
               </p>
+              <button class="fermer">fermer</button>
             </div>
             <form
               id="form"
@@ -71,7 +72,7 @@
             <div class="formData first" 
             data-error="Vous devez entrer votre prénom." 
             data-error-visible="false" 
-            data-error-1="Le prénom ne doit contenir que des lettres et des espaces." 
+            data-error-1="Votre prénom n'est pas valide." 
             data-error-1-visible="false">
             <label for="first">Prénom</label><br>
             <input
@@ -87,7 +88,7 @@
         <div class="formData last" 
               data-error="Vous devez entrer votre nom." 
               data-error-visible="false" 
-              data-error-1="Le nom ne doit contenir que des lettres et des espaces." 
+              data-error-1="Votre nom n'est pas valide." 
               data-error-1-visible="false">
             <label for="last">Nom</label><br>
             <input
@@ -125,7 +126,7 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                   
+                
                 /><br>
               </div>
               <div
@@ -231,8 +232,9 @@
                   type="checkbox"
                   id="checkbox1"
                   name="terms"
+                  checked
                 />
-                <label class="checkbox2-label" for="checkbox1"  >
+                <label class="checkbox2-label" for="checkbox1" >
                   <span class="checkbox-icon" ></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -259,7 +261,7 @@
         Copyright 2014 - 2022, GameOn Inc.
       </p>
     </footer>
-    <script src="/starterOnly/js/modal.js"></script>
-    <script src="/starterOnly/js/form.js"></script>
+    <script src="./starterOnly/js/modal.js"></script>
+    <script src="./starterOnly/js/form.js"></script>
   </body>
 </html>

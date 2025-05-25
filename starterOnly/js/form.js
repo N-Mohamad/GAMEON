@@ -1,6 +1,6 @@
 function firstNameCheck(value) {
 const error = document.querySelector('.first');
-const regex = /^[A-Za-z]+$/;
+const regex = /^[A-Za-z]{2,}$/;
 if (!value) {
     error.setAttribute('data-error-visible', 'true');
     error.setAttribute('data-error-1-visible', 'false');
@@ -18,7 +18,7 @@ if (!value) {
 
 function lastNameCheck(value) {
 const error = document.querySelector('.last');
-const regex = /^[A-Za-z]+$/;
+const regex = /^[A-Za-z]{2,}$/;
 if (!value) {
     error.setAttribute('data-error-visible', 'true');
     error.setAttribute('data-error-1-visible', 'false');

@@ -11,6 +11,7 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const closeModal = document.querySelector(".close");
 const formContent = document.querySelector("form");
 const reussit = document.querySelector(".reussit");
+const fermer = document.querySelector(".fermer");
 
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
@@ -20,6 +21,11 @@ function launchModal() {
 }
 
 closeModal.addEventListener("click", closeModalX);
+function closeModalX() {
+  modalbg.style.display = "none";
+}
+
+fermer.addEventListener("click", closeModalX);
 function closeModalX() {
   modalbg.style.display = "none";
 }

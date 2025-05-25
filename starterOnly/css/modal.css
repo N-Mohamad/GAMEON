@@ -360,7 +360,8 @@ input {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.fermer {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -553,7 +554,7 @@ footer {
     word-wrap: break-word;
   }
   .hero-text {
-    font-size: 1.5rem;
+    font-size: 13px;
     word-wrap: break-word;
   }
   .hero-img img {
